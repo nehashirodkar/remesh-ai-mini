@@ -4,6 +4,8 @@ remesh.ai mini- A simplified conversation insights demo inspired by remesh.ai.
 
 
 
+
+
 🚀 Features
 
 
@@ -27,6 +29,8 @@ remesh.ai mini- A simplified conversation insights demo inspired by remesh.ai.
 
 
 
+
+
 🧠 Data Model
 
 
@@ -41,6 +45,8 @@ remesh.ai mini- A simplified conversation insights demo inspired by remesh.ai.
 
 
 
+
+
 🛠 Tech Stack
 
 
@@ -50,6 +56,8 @@ remesh.ai mini- A simplified conversation insights demo inspired by remesh.ai.
 2\. SQLite (Database)
 
 3\. HTML + Bootstrap (Frontend)
+
+
 
 
 
