@@ -1,11 +1,4 @@
 remesh.ai mini- A simplified conversation insights demo inspired by remesh.ai.
-
-
-
-
-
-
-
 🚀 Features
 
 
