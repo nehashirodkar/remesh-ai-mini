@@ -17,8 +17,7 @@ remesh.ai mini- A simplified conversation insights demo inspired by remesh.ai.
 4\. Search functionality across:
 	- Conversation titles
 	- Message content
-
-&#x09;- Thought content
+	- Thought content
 
 5\. Filtered search results (only relevant messages shown instead of full conversation)
 
@@ -32,7 +31,7 @@ remesh.ai mini- A simplified conversation insights demo inspired by remesh.ai.
 
 
 
-1. Conversation → contains multiple Messages
+1\. Conversation → contains multiple Messages
 
 2\. Message → belongs to a Conversation and can have multiple Thoughts
 
@@ -46,7 +45,7 @@ remesh.ai mini- A simplified conversation insights demo inspired by remesh.ai.
 
 
 
-1. Django (Backend)
+1\. Django (Backend)
 
 2\. SQLite (Database)
 
