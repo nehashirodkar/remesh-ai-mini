@@ -5,6 +5,12 @@ This project models structured conversations, messages, and associated thoughts,
 
 ---
 
+## Demo Video
+
+Watch the demo here: https://www.loom.com/share/66ea47628b564988b37bdf0196508248
+
+---
+
 ## 🚀 Features
 
 * Create and manage conversations
