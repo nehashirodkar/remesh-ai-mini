@@ -73,21 +73,12 @@ remesh.ai mini- A simplified conversation insights demo inspired by remesh.ai.
 3\. Install dependencies:
 	pip install -r requirements.txt
 
-
-
 4\. Run migrations:
-
-&#x20;  	python manage.py migrate
-
-&#x20; 
+	python manage.py migrate
 
 5\. Start the development server:
-
-&#x20;  	python manage.py runserver
-
-
+	python manage.py runserver
 
 6\. Open in browser:
-
-&#x20;  	http://127.0.0.1:8000/
+	http://127.0.0.1:8000/
 
