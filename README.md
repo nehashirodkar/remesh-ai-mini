@@ -1,78 +1,62 @@
-\# remesh.ai mini
+remesh.ai mini- A simplified conversation insights demo inspired by remesh.ai.
 
 
 
-A simplified conversation insights demo inspired by remesh.ai.
+
+
+🚀 Features
 
 
 
-\---
+1\. Create and manage Conversations
+
+2\. Add Messages within a Conversation
+
+3\. Add Thoughts linked to specific Messages
+
+4\. Search functionality across:
+	- Conversation titles
+	- Message content
+
+&#x09;- Thought content
+
+5\. Filtered search results (only relevant messages shown instead of full conversation)
+
+6\. Clean and responsive UI using Bootstrap
 
 
 
-\## 🚀 Features
+
+
+🧠 Data Model
 
 
 
-\* Create and manage Conversations
+1. Conversation → contains multiple Messages
 
-\* Add Messages within a Conversation
+2\. Message → belongs to a Conversation and can have multiple Thoughts
 
-\* Add Thoughts linked to specific Messages
-
-\* Search functionality across:
+3\. Thought → linked to a specific Message
 
 
 
-&#x20; \* Conversation titles
 
-&#x20; \* Message content
 
-&#x20; \* Thought content
-
-\* Filtered search results (only relevant messages shown instead of full conversation)
-
-\* Clean and responsive UI using Bootstrap
+🛠 Tech Stack
 
 
 
-\---
+1. Django (Backend)
+
+2\. SQLite (Database)
+
+3\. HTML + Bootstrap (Frontend)
 
 
 
-\## 🧠 Data Model
 
 
-
-\* \*\*Conversation\*\* → contains multiple Messages
-
-\* \*\*Message\*\* → belongs to a Conversation and can have multiple Thoughts
-
-\* \*\*Thought\*\* → linked to a specific Message
-
-
-
-\---
-
-
-
-\## 🛠 Tech Stack
-
-
-
-\* Django (Backend)
-
-\* SQLite (Database)
-
-\* HTML + Bootstrap (Frontend)
-
-
-
-\---
-
-
-
-\## ⚙️ How to Run Locally
+⚙️ How to Run Locally
 
 
 
@@ -81,60 +65,23 @@ A simplified conversation insights demo inspired by remesh.ai.
 2\. Create a virtual environment
 
 3\. Install dependencies:
+	pip install -r requirements.txt
 
 
-
-&#x20;  ```
-
-&#x20;  pip install -r requirements.txt
-
-&#x20;  ```
 
 4\. Run migrations:
 
+&#x20;  	python manage.py migrate
 
-
-&#x20;  ```
-
-&#x20;  python manage.py migrate
-
-&#x20;  ```
+&#x20; 
 
 5\. Start the development server:
 
+&#x20;  	python manage.py runserver
 
 
-&#x20;  ```
-
-&#x20;  python manage.py runserver
-
-&#x20;  ```
 
 6\. Open in browser:
 
-
-
-&#x20;  ```
-
-&#x20;  http://127.0.0.1:8000/
-
-&#x20;  ```
-
-
-
-\---
-
-
-
-\## 📌 Notes
-
-
-
-\* This is a demo project built as part of a take-home assignment
-
-\* Focused on backend relationships, structured data flow, and search functionality
-
-\* UI is designed to be simple, clean, and user-friendly
-
-
+&#x20;  	http://127.0.0.1:8000/
 
