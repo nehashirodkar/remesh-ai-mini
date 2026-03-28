@@ -1,0 +1,54 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Conversations{% endblock %}
+
+{% block content %}
+<div class="hero">
+    <h1>Conversations that surface real insights</h1>
+    <p>Create conversations, add messages, collect thoughts, and explore responses in one clean workspace.</p>
+</div>
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h2 class="section-title mb-0">All Conversations</h2>
+</div>
+
+<div class="top-actions mb-3">
+    <a href="{% url 'conversation_create' %}" class="btn btn-primary">Create Conversation</a>
+    <a href="{% url 'message_create' %}" class="btn btn-outline-primary">Create Message</a>
+    <a href="{% url 'thought_create' %}" class="btn btn-outline-dark">Create Thought</a>
+</div>
+
+<div class="search-box">
+    <form method="get" class="row g-2">
+        <div class="col-md-10">
+            <input type="text" name="q" class="form-control" placeholder="Search conversations, messages or thoughts" value="{{ query }}">
+        </div>
+        <div class="col-md-2">
+            <button type="submit" class="btn btn-dark w-100">Search</button>
+        </div>
+    </form>
+</div>
+
+<div class="row g-4">
+    {% for convo in conversations %}
+    <div class="col-md-6">
+        <div class="app-card h-100">
+            <div class="muted-label mb-2">Conversation</div>
+            <h4>{{ convo.title }}</h4>
+            <p class="text-muted mb-3">Start Date: {{ convo.start_date }}</p>
+            {% if query %}
+                <a href="{% url 'conversation_detail' convo.id %}?message_q={{ query }}" class="btn btn-primary">Open Conversation</a>
+            {% else %}
+                <a href="{% url 'conversation_detail' convo.id %}" class="btn btn-primary">Open Conversation</a>
+            {% endif %}
+        </div>
+    </div>
+    {% empty %}
+    <div class="col-12">
+        <div class="app-card">
+            <p class="mb-0">No conversations found.</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

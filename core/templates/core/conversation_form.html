@@ -1,0 +1,16 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Create Conversation{% endblock %}
+
+{% block content %}
+<h2 class="section-title">Create Conversation</h2>
+
+<div class="app-card">
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Save</button>
+        <a href="{% url 'conversation_list' %}" class="btn btn-outline-secondary">Back</a>
+    </form>
+</div>
+{% endblock %}

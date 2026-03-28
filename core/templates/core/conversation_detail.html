@@ -1,0 +1,51 @@
+{% extends 'core/base.html' %}
+
+{% block title %}{{ conversation.title }}{% endblock %}
+
+{% block content %}
+<div class="hero">
+    <h1>{{ conversation.title }}</h1>
+    <p>Explore messages and thoughts within this conversation.</p>
+</div>
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h2 class="section-title mb-0">Messages</h2>
+    <span class="text-muted">Start Date: {{ conversation.start_date }}</span>
+</div>
+
+<div class="search-box">
+    <form method="get" class="row g-2">
+        <div class="col-md-10">
+            <input type="text" name="message_q" class="form-control" placeholder="Search messages by content" value="{{ message_query }}">
+        </div>
+        <div class="col-md-2">
+            <button type="submit" class="btn btn-dark w-100">Search</button>
+        </div>
+    </form>
+</div>
+
+{% for message in messages %}
+<div class="message-card">
+    <div class="muted-label mb-2">Message</div>
+    <h5>{{ message.text }}</h5>
+    <p class="text-muted">Sent at: {{ message.sent_at }}</p>
+
+    <hr>
+
+    <div class="muted-label mb-2">Thoughts</div>
+    <ul class="thought-list">
+        {% for thought in message.thoughts.all %}
+            <li>{{ thought.text }} <span class="text-muted">— {{ thought.sent_at }}</span></li>
+        {% empty %}
+            <li>No thoughts yet.</li>
+        {% endfor %}
+    </ul>
+</div>
+{% empty %}
+<div class="app-card">
+    <p class="mb-0">No messages found.</p>
+</div>
+{% endfor %}
+
+<a href="{% url 'conversation_list' %}" class="btn btn-outline-secondary mt-3">Back</a>
+{% endblock %}
