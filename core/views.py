@@ -64,7 +64,10 @@ def conversation_detail(request, conversation_id):
     messages = conversation.messages.all().prefetch_related('thoughts')
 
     if message_query:
-        messages = messages.filter(text__icontains=message_query)
+        messages = messages.filter(
+            Q(text__icontains=message_query) |
+            Q(thoughts__text__icontains=message_query)
+        ).distinct()
 
     return render(request, 'core/conversation_detail.html', {
         'conversation': conversation,
